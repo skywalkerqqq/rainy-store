@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>星降マート — Rainy Night Diorama</title>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #05060a; }
+  body {
+    background-color: #05060a;
+    background-image:
+      radial-gradient(circle at 48% 38%, rgba(86, 77, 142, 0.20) 0%, rgba(24, 22, 43, 0.00) 36%),
+      radial-gradient(circle at 70% 67%, rgba(90, 52, 93, 0.13) 0%, rgba(24, 22, 43, 0.00) 30%),
+      radial-gradient(circle at 30% 73%, rgba(32, 79, 104, 0.12) 0%, rgba(24, 22, 43, 0.00) 34%),
+      radial-gradient(ellipse at 50% 42%, #17182b 0%, #0c0d17 48%, #07080e 72%, #040509 100%);
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse at 50% 47%, rgba(0,0,0,0) 42%, rgba(0,0,0,0.32) 80%, rgba(0,0,0,0.62) 100%);
+    z-index: 2;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    z-index: 3;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+    background-size: 220px 220px;
+    mix-blend-mode: soft-light;
+  }
+  canvas {
+    display: block;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    touch-action: none;
+    z-index: 1;
+  }
+  canvas:active { cursor: grabbing; }
+</style>
+</head>
+<body>
+  <script src="vendor/three.min.js"></script>
+  <script src="src/core.js"></script>
+  <script src="src/street.js"></script>
+  <script src="src/store.js"></script>
+  <script src="src/props.js"></script>
+  <script src="src/background.js"></script>
+  <script src="src/ambient.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "rainy-store-diorama",
+  "version": "1.0.0",
+  "description": "星降マート — an interactive 3D rainy-night Japanese convenience-store diorama built with Three.js.",
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "three.js",
+    "webgl",
+    "diorama",
+    "3d",
+    "rainy-night",
+    "japanese",
+    "procedural"
+  ],
+  "devDependencies": {
+    "three": "^0.160.0"
+  },
+  "scripts": {
+    "build": "node tools/build.js"
+  }
+}

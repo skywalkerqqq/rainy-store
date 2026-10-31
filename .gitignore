@@ -1,0 +1,18 @@
+# ---- Dependencies ----
+# three.min.js is vendored in vendor/, so runtime needs no install.
+node_modules/
+
+# ---- npm cache ----
+.npm-cache/
+
+# ---- Development screenshots / internal build artifacts ----
+shots/
+
+# ---- Internal team spec (not for public distribution) ----
+SPEC.md
+
+# ---- OS / editor noise ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
